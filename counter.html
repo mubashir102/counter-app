@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="counter.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="content">
+        <h1>Counter:</h1>
+        <h2 id="btn-count">0</h2>
+        <button id="increment-btn" onclick="increment()">INCREMENT</button>
+        <button id="save-btn" onclick="save()">SAVE</button>
+        <!-- <button id="reset-btn" onclick="reset()">RESET</button> -->
+        <p id="desc" style="text-align: left">Last entries:</p>
+      </div>
+    </div>
+
+    <script>
+      let plus = document.getElementById("btn-count");
+
+      //console.log(result)
+      var n = 0;
+
+      function increment() {
+        n = n + 1;
+        plus.textContent = n;
+      }
+
+      //save button/ functin start
+
+      let saveResult = document.getElementById("desc");
+      // console.log(saveResult);
+
+      function save() {
+        let countStr = n + " - ";
+        saveResult.textContent += countStr;
+
+        n = 0;
+        plus.textContent = n;
+      }
+
+      //   let reset = document.getElementById("btn-count");
+
+      //   function reset() {
+      //     n = 0;
+      //   }
+    </script>
+  </body>
+</html>
